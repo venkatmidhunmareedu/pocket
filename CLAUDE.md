@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## State of the repo
 
-No git repo. Goal: an Android clone of the **MyMoney** expense tracker (`com.raha.app.mymoney.free` v6.6-free, vc 57, minSdk 23, targetSdk 37) plus two add-ons. Everything below under "Reference app" was recovered from the installed APK on the author's phone, not from source.
+Git repo on `main` (local; the user adds the remote and pushes; never commit `keystore.properties` or `*.jks`). Goal: an Android clone of the **MyMoney** expense tracker (`com.raha.app.mymoney.free` v6.6-free, vc 57, minSdk 23, targetSdk 37) plus two add-ons. Everything below under "Reference app" was recovered from the installed APK on the author's phone, not from source.
 
 ## Add-on features (the point of the clone)
 
@@ -74,5 +74,7 @@ export JAVA_HOME=~/tools/jdk21
 ./gradlew assembleDebug                       # APK at app/build/outputs/apk/debug/
 adb -s 192.168.0.218:33123 install -r app/build/outputs/apk/debug/app-debug.apk
 ```
+
+Release: `./gradlew assembleRelease` (R8 on, 3.6 MB vs 17.7 MB debug) signs with the key named in the git-ignored `keystore.properties` (keystore at `~/.android/pocket-release.jks`, created 2026-10-22; the user must back up both). It cannot install over the debug app (different signature; uninstall wipes data, so back up first). `-PidSuffix=.rel` builds a side-by-side copy (`app.pocket.rel`) for testing R8 on the phone; the minified build was checked that way (intro, main, chat), uninstall it afterwards. The phone currently has the debug build. Phone over USB is serial `167dfaca`.
 
 SDK at `~/Android/Sdk` (platform 36, build-tools 36 + 35); `local.properties` holds `sdk.dir`. Verified on the phone: builds, installs, records can be added and listed. Unit tests: `./gradlew testDebugUnitTest` (only `CalcTest`, 10 tests passing; carry-over and backup have no automated tests, they were checked by hand); single test: `./gradlew testDebugUnitTest --tests app.pocket.ui.CalcTest`. The OnePlus "install finished" screen steals focus after `adb install`; press back before `adb shell am start -n app.pocket/.ui.MainActivity`. App crashes show in `adb logcat -d -b crash`.
