@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_period"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@style/TextSection"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/next"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="?attr/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/btn_options"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/display_options"
+            android:src="@drawable/ic_tune"
+            app:tint="?attr/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/HeaderCol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView style="@style/HeaderCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_cap1" android:text="@string/expense" />
+            <TextView android:id="@+id/tv_expense" style="@style/HeaderAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:maxLines="1" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="11sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HeaderCol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView style="@style/HeaderCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_cap2" android:text="@string/income" />
+            <TextView android:id="@+id/tv_income" style="@style/HeaderAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:maxLines="1" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="11sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/col3"
+            style="@style/HeaderCol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView style="@style/HeaderCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_cap3" android:text="@string/total" />
+            <TextView android:id="@+id/tv_total" style="@style/HeaderAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:maxLines="1" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="11sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

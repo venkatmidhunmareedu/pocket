@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="Appearance">
+        <ListPreference
+            app:defaultValue="original"
+            app:entries="@array/entries_theme"
+            app:entryValues="@array/values_theme"
+            app:iconSpaceReserved="false"
+            app:key="key_theme"
+            app:title="Theme"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="s"
+            app:entries="@array/entries_ui_mode"
+            app:entryValues="@array/values_ui_mode"
+            app:iconSpaceReserved="false"
+            app:key="key_ui_mode"
+            app:title="UI mode"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="INR"
+            app:entries="@array/entries_currency"
+            app:entryValues="@array/values_currency"
+            app:iconSpaceReserved="false"
+            app:key="key_currency_sign"
+            app:title="Currency sign"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="start"
+            app:entries="@array/entries_currency_position"
+            app:entryValues="@array/values_currency_position"
+            app:iconSpaceReserved="false"
+            app:key="key_currency_position"
+            app:title="Currency position"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="2"
+            app:entries="@array/entries_decimal_place"
+            app:entryValues="@array/values_decimal_place"
+            app:iconSpaceReserved="false"
+            app:key="key_decimal_place"
+            app:title="Decimal places"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="key_note_visibility"
+            app:summary="Preview notes where space allows"
+            app:title="Notes in record list" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="Security">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="key_pin_screen"
+            app:summary="Requires a Passcode to enter Pocket"
+            app:title="Passcode protection" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="Notification">
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="key_reminder_on"
+            app:summary="Remind to add expenses occasionally"
+            app:title="Remind everyday" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="Payment watcher">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="key_watcher_service"
+            app:title="Payment watcher service" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="key_watched_apps"
+            app:title="Watched payment apps" />
+    </PreferenceCategory>
+    <PreferenceCategory app:iconSpaceReserved="false" app:title="About">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="key_about"
+            app:summary="Your personal finance manager"
+            app:title="Pocket" />
+    </PreferenceCategory>
+</PreferenceScreen>

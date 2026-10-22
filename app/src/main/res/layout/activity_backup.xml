@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/pkBar"
+        app:title="Backup &amp; Restore"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="?attr/colorPrimary"
+        app:titleTextColor="?attr/pkBrand" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="● A backup file contains all your records, categories, accounts &amp; budgets (at the time of backup). Using this file, you can restore the saved data later in case your device is lost or you accidentally uninstall the app.\n\n● Select a backup directory where you want Pocket to create backup files and search for backup files to restore.\n\n● To make a backup, press BACKUP NOW, and Pocket will create a single backup file (.mbak) inside your backup directory.\n\n● To restore a backup file, make sure that the file (.mbak) exists inside your selected backup directory, then press RESTORE. Pocket will display a list of backup files found inside your backup directory.\n\n● It is recommended to create backups regularly and keep the latest backup files in a safer place (ie. your computer or cloud storage)."
+                android:textAppearance="@style/TextSmall" />
+
+            <TextView
+                android:id="@+id/tv_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textAppearance="@style/TextSub" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dir"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select/Change directory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Backup now" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_restore"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Restore now" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Exported files (.csv, .pdf) cannot be used to restore data. They are not backup files."
+                android:textAppearance="@style/TextSub" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

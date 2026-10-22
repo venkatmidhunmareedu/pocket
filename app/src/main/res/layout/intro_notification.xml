@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="48dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_notifications"
+        app:tint="?attr/colorPrimary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Remind everyday to add your expenses?"
+        android:textAppearance="@style/TextSection"
+        android:textSize="20sp" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Remind everyday"
+        android:textAppearance="@style/TextSmall" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Turn on reminder to get daily notifications for adding expenses. You can always change it later."
+        android:textAppearance="@style/TextSub" />
+
+    <TextView
+        android:id="@+id/tv_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Notifications are disabled in system settings. Pocket cannot show notifications until you enable them."
+        android:textAppearance="@style/TextSmall"
+        android:textColor="?attr/pkNegative"
+        android:visibility="gone" />
+</LinearLayout>

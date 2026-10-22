@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default palette, light. Dark variant in values-night. -->
+    <color name="pk_bg">#fffde7</color>
+    <color name="pk_on_surface">#004d40</color>
+    <color name="pk_primary">#00695c</color>
+    <color name="pk_on_primary">#ffffff</color>
+    <color name="pk_negative">#c62828</color>
+    <color name="pk_positive">#2e7d32</color>
+    <color name="pk_neutral">#283593</color>
+    <color name="pk_surface_light">#fffcd6</color>
+    <color name="pk_disabled">#669383</color>
+    <color name="pk_tone">#ccdac6</color>
+    <color name="pk_bar">#fff9c4</color>
+    <color name="pk_brand">#000000</color>
+    <color name="chat_bg">#faf9f5</color>
+    <color name="chat_surface">#efede4</color>
+    <color name="chat_composer">#ffffff</color>
+    <color name="chat_stroke">#dad7cb</color>
+    <color name="chat_text">#1f1e1d</color>
+    <color name="chat_muted">#7b786f</color>
+    <color name="chat_send_bg">#1f1e1d</color>
+    <color name="chat_send_fg">#ffffff</color>
+</resources>

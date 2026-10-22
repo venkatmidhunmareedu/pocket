@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chat_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Chats"
+                android:src="@drawable/ic_menu_chat"
+                app:tint="@color/chat_text" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_new"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="New chat"
+                android:src="@drawable/ic_chat_add" />
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="More"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/chat_text" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp" />
+
+            <ScrollView
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/chat_bg"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_burst"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/newsreader"
+        app:fontFamily="@font/newsreader"
+                        android:gravity="center"
+                        android:textColor="@color/chat_text"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/chat_muted"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/suggestions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/btn_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_chat_new"
+                        android:gravity="center"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:text="Connect an AI provider"
+                        android:textColor="@color/chat_send_fg"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Ask about your spending"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="6"
+                android:minHeight="52dp"
+                android:paddingStart="20dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/chat_text"
+                android:textColorHint="@color/chat_muted"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_chat_circle"
+                    android:contentDescription="More options"
+                    android:src="@drawable/ic_add"
+                    app:tint="@color/chat_text" />
+
+                <TextView
+                    android:id="@+id/btn_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_chat_pill"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxWidth="200dp"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/chat_text"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_send"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_circle_primary"
+                    android:contentDescription="Send"
+                    android:src="@drawable/ic_arrow_upward"
+                    app:tint="@color/chat_send_fg" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/chat_bg"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="24dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/newsreader"
+        app:fontFamily="@font/newsreader"
+                    android:text="Pocket"
+                    android:textColor="@color/chat_text"
+                    android:textSize="32sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Search chats"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/chat_text" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_filter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_chat_pill"
+                android:hint="Search chats"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/chat_text"
+                android:textColorHint="@color/chat_muted"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/chat_muted" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Back to Pocket"
+                    android:textColor="@color/chat_text"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="Recents"
+                android:textColor="@color/chat_muted"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_chats"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingBottom="96dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_new_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_chat_new"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="22dp"
+            android:paddingEnd="26dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_add"
+                app:tint="@color/chat_send_fg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="New chat"
+                android:textColor="@color/chat_send_fg"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

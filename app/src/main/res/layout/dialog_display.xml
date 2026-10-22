@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View mode:"
+        android:textAppearance="@style/TextSection" />
+
+    <RadioGroup
+        android:id="@+id/rg_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sort:"
+        android:textAppearance="@style/TextSection" />
+
+    <RadioGroup
+        android:id="@+id/rg_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New to old" />
+
+        <RadioButton
+            android:id="@+id/rb_old"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Old to new" />
+    </RadioGroup>
+</LinearLayout>

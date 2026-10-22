@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/pkBar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Cancel"
+            android:src="@drawable/ic_close"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Widget Preferences"
+            android:textAppearance="@style/TextSection"
+            android:textColor="?attr/pkBrand"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btn_ok"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="OK"
+            android:src="@drawable/ic_check"
+            app:tint="?attr/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="#FF263238"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preview:"
+            android:textAppearance="@style/TextSmall"
+            android:textColor="#FFFFFFFF" />
+
+        <FrameLayout
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show total balance"
+                android:textAppearance="@style/TextSection" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Show all accounts balance instead of last added time"
+                android:textAppearance="@style/TextSub" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dark background"
+                android:textAppearance="@style/TextSection" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Dark colored background for widget"
+                android:textAppearance="@style/TextSub" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passcode for new record"
+                android:textAppearance="@style/TextSection" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="When enabled, adding new record from this widget will require passcode"
+                android:textAppearance="@style/TextSub" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_smart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Smart input"
+                android:textAppearance="@style/TextSection" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add record and quit instead of opening Pocket"
+                android:textAppearance="@style/TextSub" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <style name="Brand" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/pacifico</item>
+        <item name="fontFamily">@font/pacifico</item>
+        <item name="android:textColor">?attr/pkBrand</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    <style name="TextSmall" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="TextSub" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">?attr/pkDisabled</item>
+    </style>
+    <style name="TextSection" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Pocket.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+    <style name="Pocket.Fab" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">?attr/pkBar</item>
+        <item name="tint">?attr/colorPrimary</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+    </style>
+
+    <style name="HeaderCol">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="HeaderCaption" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="HeaderAmount" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="PassDot">
+        <item name="tint">?attr/colorPrimary</item>
+        <item name="android:src">@drawable/ic_radio_button_unchecked</item>
+    </style>
+    <style name="NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

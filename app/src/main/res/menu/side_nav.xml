@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/side_chat" android:icon="@drawable/ic_chat" android:title="Ask Pocket (AI)" />
+        <item android:id="@+id/side_preferences" android:icon="@drawable/ic_settings" android:title="@string/preferences" />
+    </group>
+    <item android:id="@+id/side_management" android:title="Management">
+        <menu>
+            <item android:id="@+id/side_export" android:icon="@drawable/ic_file_download" android:title="Export Report" />
+            <item android:id="@+id/side_backup" android:icon="@drawable/ic_backup" android:title="@string/backup_restore" />
+            <item android:id="@+id/side_reset" android:icon="@drawable/ic_delete" android:title="Delete &amp; Reset" />
+        </menu>
+    </item>
+    <item android:id="@+id/side_application" android:title="Application">
+        <menu>
+            <item android:id="@+id/side_watcher" android:icon="@drawable/ic_visibility" android:title="@string/payment_watcher" />
+            <item android:id="@+id/side_help" android:icon="@drawable/ic_help" android:title="@string/help" />
+            <item android:id="@+id/side_feedback" android:icon="@drawable/ic_feedback" android:title="Feedback" />
+        </menu>
+    </item>
+</menu>

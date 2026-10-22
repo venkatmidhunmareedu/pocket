@@ -1,0 +1,41 @@
+<resources>
+    <style name="Theme.Pocket" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pk_primary</item>
+        <item name="colorOnPrimary">@color/pk_on_primary</item>
+        <item name="colorPrimaryContainer">@color/pk_surface_light</item>
+        <item name="colorOnPrimaryContainer">@color/pk_on_surface</item>
+        <item name="colorControlActivated">@color/pk_primary</item>
+        <item name="colorSecondaryContainer">@color/pk_surface_light</item>
+        <item name="colorOnSecondaryContainer">@color/pk_on_surface</item>
+        <item name="colorSecondary">@color/pk_primary</item>
+        <item name="colorOnSecondary">@color/pk_on_primary</item>
+        <item name="colorSurface">@color/pk_bg</item>
+        <item name="colorOnSurface">@color/pk_on_surface</item>
+        <item name="colorSurfaceContainer">@color/pk_bar</item>
+        <item name="colorSurfaceContainerHigh">@color/pk_bar</item>
+        <item name="colorSurfaceContainerLow">@color/pk_bg</item>
+        <item name="colorOnSurfaceVariant">@color/pk_disabled</item>
+        <item name="colorOutline">@color/pk_disabled</item>
+        <item name="colorOutlineVariant">@color/pk_tone</item>
+        <item name="colorError">@color/pk_negative</item>
+        <item name="android:colorBackground">@color/pk_bg</item>
+        <item name="android:windowBackground">@color/pk_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:fontFamily">@font/lexend_deca</item>
+        <item name="fontFamily">@font/lexend_deca</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:textColorPrimary">@color/pk_on_surface</item>
+        <item name="android:textColorSecondary">@color/pk_disabled</item>
+        <item name="pkNegative">@color/pk_negative</item>
+        <item name="pkPositive">@color/pk_positive</item>
+        <item name="pkNeutral">@color/pk_neutral</item>
+        <item name="pkSurfaceLight">@color/pk_surface_light</item>
+        <item name="pkDisabled">@color/pk_disabled</item>
+        <item name="pkBar">@color/pk_bar</item>
+        <item name="pkBrand">@color/pk_brand</item>
+        <item name="pkTone">@color/pk_tone</item>
+    </style>
+</resources>

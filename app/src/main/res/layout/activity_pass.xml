@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textAppearance="@style/TextSection"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <ImageView style="@style/PassDot" android:layout_width="28dp" android:layout_height="28dp" android:layout_margin="8dp" android:importantForAccessibility="no" />
+        <ImageView style="@style/PassDot" android:layout_width="28dp" android:layout_height="28dp" android:layout_margin="8dp" android:importantForAccessibility="no" />
+        <ImageView style="@style/PassDot" android:layout_width="28dp" android:layout_height="28dp" android:layout_margin="8dp" android:importantForAccessibility="no" />
+        <ImageView style="@style/PassDot" android:layout_width="28dp" android:layout_height="28dp" android:layout_margin="8dp" android:importantForAccessibility="no" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="24dp"
+        android:textAppearance="@style/TextSmall"
+        android:textColor="?attr/pkNegative" />
+
+    <GridLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="4" />
+</LinearLayout>

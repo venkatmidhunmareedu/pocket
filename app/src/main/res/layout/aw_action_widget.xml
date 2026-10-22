@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aw_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_aw_light"
+    android:gravity="center_vertical"
+    android:minHeight="72dp"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <ImageView
+        android:id="@+id/aw_launch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Open Pocket"
+        android:padding="10dp"
+        android:src="@drawable/ic_account_balance_wallet" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aw_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="All accounts"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/aw_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="₹10,000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/aw_div1"
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="#33000000"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/aw_expense"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Add expense"
+        android:padding="12dp"
+        android:src="@drawable/ic_trending_down" />
+
+    <ImageView
+        android:id="@+id/aw_div2"
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="#33000000"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/aw_income"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Add income"
+        android:padding="12dp"
+        android:src="@drawable/ic_trending_up" />
+
+    <ImageView
+        android:id="@+id/aw_div3"
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="#33000000"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/aw_transfer"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Add transfer"
+        android:padding="12dp"
+        android:src="@drawable/ic_swap_horiz" />
+</LinearLayout>

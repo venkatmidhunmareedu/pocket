@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_copy"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Copy"
+            android:src="@drawable/ic_content_copy"
+            app:tint="@color/chat_muted" />
+
+        <ImageButton
+            android:id="@+id/btn_share"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Share"
+            android:src="@drawable/ic_share"
+            app:tint="@color/chat_muted" />
+
+        <ImageButton
+            android:id="@+id/btn_retry"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Retry"
+            android:src="@drawable/ic_refresh"
+            app:tint="@color/chat_muted" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="AI can make mistakes. Check important figures."
+        android:textColor="@color/chat_muted"
+        android:textSize="14sp" />
+</LinearLayout>

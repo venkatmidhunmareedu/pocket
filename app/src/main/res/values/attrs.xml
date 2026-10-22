@@ -1,0 +1,10 @@
+<resources>
+    <attr name="pkNegative" format="color" />
+    <attr name="pkPositive" format="color" />
+    <attr name="pkNeutral" format="color" />
+    <attr name="pkSurfaceLight" format="color" />
+    <attr name="pkDisabled" format="color" />
+    <attr name="pkBar" format="color" />
+    <attr name="pkBrand" format="color" />
+    <attr name="pkTone" format="color" />
+</resources>

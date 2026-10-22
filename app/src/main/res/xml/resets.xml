@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:iconSpaceReserved="false"
+        app:key="key_delete_all_records"
+        app:summary="Delete all records, but keeping current accounts, categories and budgets"
+        app:title="Delete all records" />
+    <Preference
+        app:iconSpaceReserved="false"
+        app:key="key_delete_all"
+        app:summary="Delete everything including records, accounts, categories and budgets"
+        app:title="Delete all" />
+    <Preference
+        app:iconSpaceReserved="false"
+        app:key="key_reset_all"
+        app:summary="Resetting the app to its initial state, deleting current records, accounts categories, and budgets"
+        app:title="Reset all" />
+</PreferenceScreen>

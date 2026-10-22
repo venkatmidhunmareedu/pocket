@@ -1,0 +1,13 @@
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+# signing material and build outputs: never commit
+keystore.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+.claude/settings.local.json

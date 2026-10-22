@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Pocket</string>
+    <string name="watcher_description">Detects a completed payment in your payment apps and asks you to log it in Pocket. Screen text is only read in the apps you configure and is never stored.</string>
+    <string name="records">Records</string>
+    <string name="analysis">Analysis</string>
+    <string name="budgets">Budgets</string>
+    <string name="accounts">Accounts</string>
+    <string name="categories">Categories</string>
+    <string name="search">Search</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="transfer">Transfer</string>
+    <string name="total">Total</string>
+    <string name="account">Account</string>
+    <string name="category">Category</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="add_notes">Add notes</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="display_options">Display options</string>
+    <string name="add_new_record">Add new record</string>
+    <string name="preferences">Preferences</string>
+    <string name="backup_restore">Backup &amp; Restore</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="payment_watcher">Payment watcher</string>
+    <string name="help">Help</string>
+    <string name="tagline">Your personal finance manager</string>
+    <string name="widget_description">Quickly add records from the home screen</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="app.pocket.ui.ActionWidgetConfigActivity"
+    android:description="@string/widget_description"
+    android:initialLayout="@layout/aw_action_widget"
+    android:minWidth="320dp"
+    android:minHeight="40dp"
+    android:minResizeWidth="250dp"
+    android:resizeMode="horizontal"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen"
+    android:widgetFeatures="reconfigurable" />

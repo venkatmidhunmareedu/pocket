@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat
+        app:iconSpaceReserved="false"
+        app:key="key_pin_lock"
+        app:persistent="false"
+        app:title="Passcode lock" />
+    <Preference
+        app:iconSpaceReserved="false"
+        app:key="key_change_pin"
+        app:title="Change Passcode" />
+</PreferenceScreen>

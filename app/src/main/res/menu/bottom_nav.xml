@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_records" android:icon="@drawable/ic_receipt_long" android:title="@string/records" />
+    <item android:id="@+id/nav_analysis" android:icon="@drawable/ic_pie_chart" android:title="@string/analysis" />
+    <item android:id="@+id/nav_budgets" android:icon="@drawable/ic_calculate" android:title="@string/budgets" />
+    <item android:id="@+id/nav_accounts" android:icon="@drawable/ic_account_balance_wallet" android:title="@string/accounts" />
+    <item android:id="@+id/nav_categories" android:icon="@drawable/ic_label" android:title="@string/categories" />
+</menu>
